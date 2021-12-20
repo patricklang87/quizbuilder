@@ -3,10 +3,11 @@ const router = express.Router();
 const pool = require('../db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const { auth } = require('../middleware/auth');
 require('dotenv').config();
 
 
-// @route POST api/quth
+// @route POST api/auth
 // @desc Login user
 // @access public
 router.post("/", async (req, res, next) => {
@@ -27,9 +28,9 @@ router.post("/", async (req, res, next) => {
                 if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials.'});
 
                 jwt.sign(
-                    {id: user.id},
+                    {id: user.rows[0].id},
                     process.env.JWT_SECRET,
-                    {expiresIn: 3600},
+                    {expiresIn: 86400},
                     (err, token) => {
                         if (err) throw err;
                         delete user.rows[0].password;
@@ -43,6 +44,15 @@ router.post("/", async (req, res, next) => {
             });
 
 
+});
+
+// @route GET api/auth/user
+// @desc Get user data
+// @access private
+router.get('/', auth, async (req, res) => {
+    const user_id = req.user.id;
+    const user = await pool.query("SELECT * FROM users WHERE id = $1", [user_id]);
+    res.json({user});
 });
 
 

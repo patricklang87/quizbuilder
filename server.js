@@ -16,6 +16,10 @@ if (process.env.NODE_ENV === 'production') {
 //routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/questions', require('./routes/questions'));
+app.use('/api/quizzes', require('./routes/quizzes'));
+app.use('/api/parts', require('./routes/parts'));
+app.use('/api/assessment', require('./routes/assessment'));
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`);

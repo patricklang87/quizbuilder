@@ -1,0 +1,26 @@
+%quizPart {
+    padding: 10px;
+    background-color: lighten($light-color, 2%);
+    border-radius: 10px;
+}
+
+.editQuizPart {
+    @extend %quizPart;
+    margin: 10px 0;
+}
+
+.takeQuizPart {
+    @extend %quizPart;
+    margin: 30px 30px;
+}
+
+.result-incorrect {
+    background-color: lighten($caution-color, 20%);
+    border-radius: 10px;
+}
+
+.result-correct {
+    background-color: lighten($primary-color, 20%);
+    border-radius: 10px;
+}
+

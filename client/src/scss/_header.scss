@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    tbody {
+        display: flex;
+    }
+    
+    tr {
+        margin: 2px 5px 2px 5px;
+    }
+}

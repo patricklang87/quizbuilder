@@ -1,0 +1,70 @@
+
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: $font-stack;
+  line-height: 1.6;  
+}
+
+main {
+    min-height: 80vh;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-display;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+}
+
+.container-lo {
+    margin:  0 10px 0 10px;
+    padding: 0 10px 0 10px;
+}
+
+%list-item-styles {
+    width: 100%;
+    border-bottom: 1px solid darken(white, 40%);
+    padding: 10px;
+}
+
+.list-item {
+    @extend %list-item-styles; 
+}
+
+.list-item-selectable {
+    @extend %list-item-styles;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($primary-color, 10%);
+        border-left: 1px solid darken(white, 40%);
+        border-right: 1px solid darken(white, 40%);
+    }
+}
+
+
+.alert-text {
+    color: $caution-color;
+}
+
+@import 'button';
+@import 'link';
+@import 'input';
+@import 'header';
+@import 'landing';
+@import 'createQuestion';
+@import 'quiz';
+@import 'table';
+@import 'icons';
+@import 'footer';

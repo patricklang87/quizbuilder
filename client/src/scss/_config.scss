@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Patua+One&display=swap');
+$light-color: #f4f4f4;
+$font-stack: 'Mulish', sans-serif;
+$font-display: 'Patua One', sans-serif;
+$primary-color: #62ff42;
+$secondary-color: #00ffff;
+$caution-color: rgb(253, 106, 106);
+$inactive-color: rgb(220, 225, 228);
+
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

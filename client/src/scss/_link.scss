@@ -1,0 +1,39 @@
+a, %link {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    &:visited {
+        color: black;
+    }
+    &:hover {
+        color: $primary-color;
+    }
+  
+}
+
+.dashboard {
+    tbody {
+        display: flex;
+    }
+    
+    tr {
+        margin: 2px 5px 2px 5px;
+    }
+}
+
+.inline-link {
+    @extend %link;
+    margin: inherit;
+    padding: inherit;
+}
+
+.nav-link {
+    @extend %link;
+}

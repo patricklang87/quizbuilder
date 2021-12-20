@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { login } from '../../utils/auth';
+import { setCurrentUser } from '../../redux/userRedux';
 
-export default function Register() {
+export default function Login({ setShowLogin }) {
+    const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [info, setInfo] = useState('');
@@ -19,38 +22,37 @@ export default function Register() {
 
         const data = {email, password};
         try {
-            const response = await axios.post('/api/auth', data);
-            if (response.data.msg) {
-                setInfo(response.data.msg);
-            } else {
-                console.log(response);
-            }
+            const response = await login(data);
+            dispatch(setCurrentUser(response.data));
         } catch (error) {
             console.log(error);
+            setInfo("Login Failed. Please check your email and password.")
         }     
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>Login</h1>
-            {(info) && <p>{info}</p>}
+            {(info) && <p className='alert-text'>{info}</p>}
             <form>
+                <label htmlFor="EmailLogin">Email</label><br />
                 <input
                     type="email"
                     name="email"
-                    id="emailReg"
+                    id="emailLogin"
                     placeholder="Email"
                     onChange={e => setEmail(e.target.value)} /><br />
-                <label for="passwordReg">Password</label><br />
+                <label htmlFor="passwordLogin">Password</label><br />
                 <input
                     type="password"
                     name="password"
-                    id="passwordReg"
+                    id="passwordLogin"
                     placeholder="Password"
                     onChange={e => setPassword(e.target.value)} /><br />
                 
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogin} className="btn-primary">Login</button>
             </form>
+            <p>First time here? <span className="inline-link" onClick={() => {setShowLogin(false)}}>Sign up</span>!</p>
         </div>
     )
 }

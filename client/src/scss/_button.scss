@@ -1,0 +1,42 @@
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    font-family: $font-stack;
+    font-weight:800;
+    &:hover {
+        transform: scale(.98);
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include set-background(lighten($primary-color, 10%));
+}
+
+.btn-secondary {
+    @extend %btn;
+    @include set-background(lighten($secondary-color, 10%));
+}
+
+.btn-caution {
+    @extend %btn;
+    @include set-background($caution-color);
+}
+
+.btn-inactive {
+    @extend %btn;
+    opacity: 0.5;
+    &:hover {
+        transform: none;
+    }
+}
+
+.btn-small {
+    @extend %btn;
+    font-size: small;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 3px;
+}

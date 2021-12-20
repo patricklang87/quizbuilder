@@ -1,0 +1,25 @@
+.landing {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 400px;
+}
+
+.hero {
+    grid-column: 2 / span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 9 / span 2;
+}
+
+.auth div {
+    box-shadow: 2px 2px 2px 2px darken($light-color, 50%);
+    border-radius: 10px;
+    background: $light-color;
+}

@@ -1,0 +1,21 @@
+.standard-table {
+    width: 100%;
+    display: block;
+
+    tbody {
+        display: block;
+    }
+
+    tr {
+        border-bottom: 1px solid darken(white, 40%);
+    }
+
+    td {
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+.td-input {
+    display: flex;
+    align-items: center;
+}
