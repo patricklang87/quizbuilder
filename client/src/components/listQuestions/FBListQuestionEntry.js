@@ -4,6 +4,8 @@ import { questionTypes } from '../../utils/questions';
 import { BsCheck, BsX } from 'react-icons/bs';
 import { removeQuizQuestion, updateQuizQuestion } from '../../redux/editQuizRedux';
 import { deleteQuestion, updateQuestion } from '../../utils/questions';
+import DeleteButton from '../../utils/DeleteButton';
+import { setRandomFallback } from 'bcryptjs';
 
 export default function FBListQuestionEntry({question, index, partId}) {
     const [showEdit, setShowEdit] = useState(false);
@@ -37,7 +39,7 @@ export default function FBListQuestionEntry({question, index, partId}) {
                         {responsesListJoined}
                     </div>
                 </td>
-                <td><button onClick={(e) => handleDelete(e, question.id)} className="btn-caution btn-small">Delete</button></td>
+                <td><button onClick={(e) => handleDelete(e, question.id)} className="btn-small btn-caution">Delete</button></td>
             </tr>
         )
     }

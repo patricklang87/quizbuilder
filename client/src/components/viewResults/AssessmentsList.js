@@ -1,7 +1,9 @@
+//Currently this portion of the webapp only shows grades. After a reorganization of the backend, I may update it to 
+// allow views of the entire quiz
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserAssessments } from '../../utils/assessment';
-import { getPartsNoAnswers } from '../../utils/parts';
+import { getUserAssessments, getOneAssessment } from '../../utils/assessment';
+// import { getPartsNoAnswers } from '../../utils/parts';
 import { setCurrentQuiz, setResult } from '../../redux/takeQuizRedux';
 import { setAssessments } from '../../redux/viewResultsRedux';
 import { useNavigate } from 'react-router';
@@ -32,7 +34,7 @@ export default function AssessmentsList() {
 
     const handleClick = async (assessment) => {
         try {
-            const response = await getPartsNoAnswers(assessment.quiz_id);
+            const response = await getOneAssessment(assessment.id);
             console.log("building past score view", response.data);
             const parts = response.data.parts;
             const questions = response.data.questions
@@ -85,7 +87,11 @@ export default function AssessmentsList() {
 
     const assessmentsList = assessmentsFiltered.map((assessment) => {
         return (
-            <tr key={`${assessment.taken_at} ${assessment.user_id}`} className="list-item-selectable" onClick={() => handleClick(assessment)}>
+            <tr key={`${assessment.taken_at} ${assessment.user_id}`} 
+            // className="list-item-selectable"
+            className="list-item"
+            // onClick={() => handleClick(assessment)}
+            >
                 <td><h4>{assessment.title}</h4></td>
                 <td>{assessment.score}</td>
                 <td>{assessment.language}</td>

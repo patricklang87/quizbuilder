@@ -108,4 +108,27 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
+// @route GET api/assessments/singleResult
+// @desc get result for a single assessment
+// @access private
+router.get('/:id', auth, async (req, res) => {
+    const assessment_id = req.params.id;
+    const assessmentInfo = await pool.query('Select * FROM submissions WHERE id = $1', [assessment_id]);
+    const questionIds = Object.keys(assessmentInfo.rows[0].responses);
+    const questionData = await pool.query('SELECT * FROM questions WHERE id = ANY($1)', [questionIds]);
+    const questions = questionData.rows;
+    const quizId = questions[0].quiz_id;
+    const partIds = new Set();
+    questions.forEach(question => partIds.add(question.part_id));
+    const partsData = await pool.query('SELECT * FROM parts WHERE id = ANY($1)', [partIds]);
+    const quizData = await pool.query('SELECT * FROM quizzes WHERE id = $1', [quizId]);
+    const data = {
+        questions,
+        parts: partsData.rows,
+        quiz: quizData.rows
+    }
+    res.json(data);
+});
+
+
 module.exports = router;

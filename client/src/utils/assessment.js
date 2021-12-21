@@ -21,3 +21,13 @@ export const getUserAssessments = async () => {
         console.log(error);
     }
 }
+
+//get data for single assessessment 
+export const getOneAssessment = async (id) => {
+    try {
+        const response = await axios.get(`/api/assessment/${id}`, tokenConfig());
+        return response;
+    } catch (error) {
+        console.log(error);
+    }
+}

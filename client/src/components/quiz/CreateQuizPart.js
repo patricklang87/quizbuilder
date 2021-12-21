@@ -90,7 +90,6 @@ const EditableQuizPart = ({part, index, setEditingQuizPart}) => {
             </div>  
         </div>
     )
-
 }
 
 export default function CreateQuizPart({part, index}) {

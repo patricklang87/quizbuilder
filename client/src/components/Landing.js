@@ -8,7 +8,7 @@ export default function Landing() {
     const isAuthenticated = useSelector(state => state.user.isAuthenticated);
 
     useEffect(() => {
-        if (isAuthenticated) navigate("/dashboard");
+        if (isAuthenticated) navigate("/dashboard/createQuiz");
     }, [isAuthenticated]);
 
 
