@@ -8,7 +8,7 @@
 
 <kbd>
  <img src="https://user-images.githubusercontent.com/73432960/147150414-b1951871-e555-4daf-ab1d-eb4579015d97.JPG" alt="Lecturna Screenshot" width="500"/>
-</kbd>
+</kbd>\\
 <kbd>
 <img src="https://user-images.githubusercontent.com/73432960/147150434-402ced05-2039-4cbc-b0dc-599010ec33a6.JPG" alt="Lecturna Screenshot" width="500"/>
 </kbd>
