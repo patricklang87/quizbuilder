@@ -36,7 +36,6 @@ router.post('/', auth, async (req, res) => {
 // @access private
 router.put('/', auth, async (req, res) => {
     const {questionText, responses, questionId} = req.body;
-    console.log(req.body);
     const body = {questionText, responses};
     const creator_id = req.user.id;
     try {

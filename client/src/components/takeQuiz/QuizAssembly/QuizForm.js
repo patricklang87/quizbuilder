@@ -24,8 +24,6 @@ export default function QuizForm() {
             return res.id === newRes.id;
         });
 
-        console.log(newRes.id)
-
         if (resIndex === -1) {
             setResponses([...responses, newRes])
         } else {

@@ -46,7 +46,6 @@ const EditableQuizPart = ({part, index, setEditingQuizPart}) => {
     const [sectionInstructions, setSectionInstructions] = useState(part.instructions || '');
 
     const handleSave = async () => {
-        console.log(parts);
         if (!sectionTitle) {
             return;
         }
@@ -67,7 +66,6 @@ const EditableQuizPart = ({part, index, setEditingQuizPart}) => {
             } else {
                 response = await editQuizPart(data);
             }
-            console.log(response);
             dispatch(editPart({data: response.data, index}));
             setEditingQuizPart(false);
         } catch (error) {

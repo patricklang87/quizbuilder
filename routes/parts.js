@@ -37,7 +37,6 @@ router.put('/', auth, async (req, res) => {
 // @access private
 router.delete('/:partId', auth, async (req, res) => {
     const part_id = req.params.partId;
-    console.log("partid", part_id)
     const creator_id = req.user.id;
     try {
         const questionsUpdate = await pool.query("UPDATE questions SET part_id = NULL WHERE part_id = $1 AND creator_id = $2", [part_id, creator_id]);

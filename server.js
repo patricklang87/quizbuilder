@@ -23,6 +23,10 @@ app.use('/api/quizzes', require('./routes/quizzes'));
 app.use('/api/parts', require('./routes/parts'));
 app.use('/api/assessment', require('./routes/assessment'));
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+})
+
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`);
 })

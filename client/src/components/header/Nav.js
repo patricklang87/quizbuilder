@@ -11,10 +11,10 @@ export default function Nav() {
         <table>
             <tbody>
                 <tr>
-                    {isAuthenticated && <InstructorLinks />}
+                    {isAuthenticated && <StudentLinks />}
                 </tr>
                 <tr>
-                    {isAuthenticated && <StudentLinks />}
+                    {isAuthenticated && <InstructorLinks />}
                 </tr>
                 <tr>
                     {isAuthenticated && <UserLinks />}

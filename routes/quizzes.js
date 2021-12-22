@@ -52,7 +52,6 @@ router.delete('/:id', auth, async (req, res) => {
         const questionsUpdate = await pool.query("UPDATE questions SET quiz_id = NULL WHERE quiz_id = $1 AND creator_id = $2", [quiz_id, creator_id]);
         const partsUpdate = await pool.query("UPDATE parts SET quiz_id = NULL WHERE quiz_id = $1 AND creator_id = $2", [quiz_id, creator_id]);
         const response = await pool.query("DELETE FROM quizzes WHERE creator_id = $1 AND id = $2", [creator_id, quiz_id]);
-        console.log(response);
         res.json(response.rows[0]);
     } catch (error) {
         console.log(error);

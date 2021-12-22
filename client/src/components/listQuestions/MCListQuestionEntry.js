@@ -63,7 +63,6 @@ export default function MCListQuestionEntry({question, index, partId}) {
             try { 
               const data = { questionText, responses: questionResponses, questionId: question.id }
               const response = await updateQuestion(data);
-              console.log(response.data);
               dispatch(updateQuizQuestion(response.data));
               setShowEdit(false);
             } catch (error) {

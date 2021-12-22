@@ -15,7 +15,6 @@ export default function FillBlankForm({ questionText, handleSave }) {
             return listItem;
             }
         );
-        console.log("rLis", responseList);
         handleSave(responseList, true);
     }
 

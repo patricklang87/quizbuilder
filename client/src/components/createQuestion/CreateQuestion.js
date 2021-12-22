@@ -22,7 +22,6 @@ export default function CreateQuestion({part, setShowAddQuestion, index}) {
     const [info, setInfo] = useState('');
 
     let questionOptions = Object.keys(questionTypes).map(key => {
-        console.log(key)
         return <option value={questionTypes[key].short} key={questionTypes[key].short}>{questionTypes[key].long}</option>
     });
 

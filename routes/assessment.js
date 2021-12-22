@@ -27,8 +27,6 @@ router.post('/', auth, async (req, res) => {
                 return ques.id === subQuestionId
             })[0];
 
-            console.log(key);
-
             let mark;
 
             const acceptableResponses = key.body.responses.filter(res => {

@@ -58,12 +58,9 @@ export default function FBListQuestionEntry({question, index, partId}) {
                 return item;
             });
 
-            console.log("newResList", newResList);
-
             try { 
               const data = { questionText, responses: newResList, questionId: question.id }
               const response = await updateQuestion(data);
-              console.log(response.data);
               dispatch(updateQuizQuestion(response.data));
               setShowEdit(false);
             } catch (error) {

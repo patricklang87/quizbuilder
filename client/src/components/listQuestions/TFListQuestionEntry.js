@@ -21,7 +21,6 @@ export default function TFListQuestionEntry({question, index, partId}) {
     }
 
     const NonEditEntry = () => {
-        console.log("ture?", question.body.responses)
         return (
             <tr onClick={() => {setShowEdit(true)}} className="list-item-selectable" key={'partQuestions' + question.id}>
                 <td>{`${index + 1}) `} {questionTypes[question.question_type].short}</td>
@@ -53,7 +52,6 @@ export default function TFListQuestionEntry({question, index, partId}) {
             try { 
               const data = { questionText, responses: questionResponses, questionId: question.id }
               const response = await updateQuestion(data);
-              console.log(response.data);
               dispatch(updateQuizQuestion(response.data));
               setShowEdit(false);
             } catch (error) {

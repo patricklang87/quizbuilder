@@ -21,7 +21,6 @@ export default function SelectQuiz() {
     useEffect(() => {
         const getQuizzes = async () => {
             const response = await getAllQuizzes();
-            console.log(response.data, "all quizzes");
             dispatch(setQuizzes(response.data));
         }
 
@@ -31,12 +30,10 @@ export default function SelectQuiz() {
     }, []);
 
     const handleClick = async (quiz) => {
-        console.log(quiz);
         try {
             const response = await getPartsNoAnswers(quiz.id);
             const parts = response.data.parts;
             const questions = response.data.questions
-            console.log(questions);
             parts.forEach(part => {
                 part['questions'] = [];
                 questions.forEach(question => {

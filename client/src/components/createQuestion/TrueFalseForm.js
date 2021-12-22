@@ -4,7 +4,6 @@ export default function TrueFalseForm({handleSave, questionText}) {
     const [responses, setResponses] = useState([{text: "true", correct: false}, {text: "false", correct: true}]);
 
     const handleResponses = (e) => {
-        console.log(e.target.value, "change checked")
         if (e.target.value === "true") {
             setResponses([{text: "true", correct: true}, {text: "false", correct: false}])
         } else {
