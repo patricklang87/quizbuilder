@@ -5,12 +5,16 @@
 ## Screenshots
 
 ### Desktop
-<img src="https://user-images.githubusercontent.com/73432960/147150414-b1951871-e555-4daf-ab1d-eb4579015d97.JPG" alt="Lecturna Screenshot" width="500"/>
+
+<kbd>
+ <img src="https://user-images.githubusercontent.com/73432960/147150414-b1951871-e555-4daf-ab1d-eb4579015d97.JPG" alt="Lecturna Screenshot" width="500"/>
+</kbd>
 <img src="https://user-images.githubusercontent.com/73432960/147150434-402ced05-2039-4cbc-b0dc-599010ec33a6.JPG" alt="Lecturna Screenshot" width="500"/>
 <img src="https://user-images.githubusercontent.com/73432960/147150400-197db160-6eff-46bb-aa0e-2068315358c2.JPG" alt="Lecturna Screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150427-d46573d0-7bf9-496f-bb3d-51832168590e.JPG" alt="Lecturna Screenshot" width="500"/>
 <img src="https://user-images.githubusercontent.com/73432960/147150409-a31c5baa-65d0-411c-89ea-0b50c85ddbd4.JPG" alt="Lecturna Screenshot" width="500"/>
 
-<img src="https://user-images.githubusercontent.com/73432960/147150427-d46573d0-7bf9-496f-bb3d-51832168590e.JPG" alt="Lecturna Screenshot" width="500"/>
+
 
 
 
