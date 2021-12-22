@@ -34,7 +34,7 @@ The project has not yet been optimized for mobile devices.
 
 ## Links
 
-- [Repo](https://github.com/patricklang87/congress_data "LegisTracker Repo") 
+- [Repo](https://github.com/patricklang87/quizbuilder "Lecturna Repo") 
 
 
 ## Run the project
