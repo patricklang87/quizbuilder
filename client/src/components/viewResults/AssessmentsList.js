@@ -104,7 +104,7 @@ export default function AssessmentsList() {
     });
 
     return (
-        <div className="container">
+        <div className="container-page">
             <h1>Select an assessment...</h1>
             <table className="standard-table">
                 <tbody>

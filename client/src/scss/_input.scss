@@ -8,7 +8,7 @@ input[type="text"], input[type="email"], input[type="password"], select, option,
 
 .table-input {
     @extend %special-input;
-    width: 150px;
+    width: 120px;
 }
 
 input[type="radio"] {

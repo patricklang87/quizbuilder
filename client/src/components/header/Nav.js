@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import Logout from '../auth/Logout';
+import InstructorLinks from './InstructorLinks';
+import StudentLinks from './StudentLinks';
+import UserLinks from './UserLinks';
 
 export default function Nav() {
     const isAuthenticated = useSelector(state => state.user.isAuthenticated);
@@ -10,13 +11,13 @@ export default function Nav() {
         <table>
             <tbody>
                 <tr>
-                    {isAuthenticated && <td><Link to="/assessmentDash">Quizzes and Results</Link></td>}
+                    {isAuthenticated && <InstructorLinks />}
                 </tr>
                 <tr>
-                    {isAuthenticated && <td><Link to="/dashboard">Create/Edit Quizzes</Link></td>}
+                    {isAuthenticated && <StudentLinks />}
                 </tr>
                 <tr>
-                    <td>{isAuthenticated ? <Logout /> : <Link to="/">Login</Link>}</td>
+                    {isAuthenticated && <UserLinks />}
                 </tr>
             </tbody>
         </table>

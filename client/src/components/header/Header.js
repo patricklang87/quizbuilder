@@ -7,9 +7,7 @@ export default function Header() {
     return (
         <div className="header container-lo">
             <h1>Lecturna</h1>
-            {(firstName) && <p><i>Hello, {firstName}!</i></p>}
-            <Nav />
-            
+            <Nav />    
         </div>
     )
 }

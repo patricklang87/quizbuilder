@@ -73,20 +73,20 @@ export default function QuizList() {
                 <td>{quiz.cultural_topic}</td>
                 <td>{quiz.course}</td>
                 <td>{new Date(quiz.created_at).toLocaleString()}</td>
-                <td><button onClick={(e) => {handleDelete(e, quiz.id);}} className="btn btn-caution">Delete</button></td>
+                <td><button onClick={(e) => {handleDelete(e, quiz.id);}} className="btn-small btn-caution">Delete</button></td>
             </tr>
         );
     });
 
     return (
-        <div className="container">
+        <div className="container-page">
             <h1>My Quizzes</h1>
             <table className="standard-table">
                 <tbody>
                     <tr>
                         <td><h2>Quiz Title</h2></td>
-                        <td><h2># Subs</h2></td>
-                        <td><h2>Avg. Score</h2></td>
+                        <td><h2>Taken</h2></td>
+                        <td><h2>Avg.</h2></td>
                         <td><h2>Language</h2></td>
                         <td><h2>Cultural Topics</h2></td>
                         <td><h2>Course</h2></td>

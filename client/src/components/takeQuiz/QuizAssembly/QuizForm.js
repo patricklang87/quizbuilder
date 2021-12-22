@@ -59,7 +59,7 @@ export default function QuizForm() {
     });
 
     return (
-        <div className="container">
+        <div className="container-page">
             <h1>{title}</h1>
             <p>{creator_fn} {creator_ln}</p>
             <div>

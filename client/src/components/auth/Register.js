@@ -34,6 +34,7 @@ export default function Register({ setShowLogin }) {
             setInfo(response.data.msg);
         } else {
             console.log(response);
+            setShowLogin(true);
         }
         
     }

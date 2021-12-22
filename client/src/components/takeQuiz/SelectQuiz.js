@@ -96,7 +96,8 @@ export default function SelectQuiz() {
     });
 
     return (
-        <div className="container">
+        <div className="container-page">
+            <div>
             <h1>Select a quiz...</h1>
             <table className="standard-table">
                 <tbody>
@@ -149,6 +150,7 @@ export default function SelectQuiz() {
                     {quizzesList}
                 </tbody>
             </table>
+        </div>
         </div>
     )
 }
