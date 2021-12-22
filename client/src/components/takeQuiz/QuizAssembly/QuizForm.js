@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import QuizPart from './QuizPart';
 import { assessQuiz } from '../../../utils/assessment';
 import { setResult } from '../../../redux/takeQuizRedux';
+import { addAssessment } from '../../../redux/viewResultsRedux';
 
 export default function QuizForm() {
     const dispatch = useDispatch();
@@ -42,6 +43,7 @@ export default function QuizForm() {
             try {
                 const response = await assessQuiz(responses);
                 dispatch(setResult(response.data));
+                dispatch(addAssessment(response.data));
                 navigate('/assessmentDash/resultsForm');
             } catch (error) {
                 console.log(error);

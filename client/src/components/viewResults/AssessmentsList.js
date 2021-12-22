@@ -32,33 +32,33 @@ export default function AssessmentsList() {
         }
     }, []);
 
-    const handleClick = async (assessment) => {
-        try {
-            const response = await getOneAssessment(assessment.id);
-            console.log("building past score view", response.data);
-            const parts = response.data.parts;
-            const questions = response.data.questions
-            console.log(questions);
-            parts.forEach(part => {
-                part['questions'] = [];
-                questions.forEach(question => {
-                    if (question.part_id === part.id) {
-                        part['questions'].push(question);
-                    }
-                });
-            });
-            const numQuestions = questions.length;
-            dispatch(setCurrentQuiz({...assessment, parts, numQuestions}));
-            dispatch(setResult(assessment));
-            navigate('/assessmentDash/resultsForm');
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    // const handleClick = async (assessment) => {
+    //     try {
+    //         const response = await getOneAssessment(assessment.id);
+    //         console.log("building past score view", response.data);
+    //         const parts = response.data.parts;
+    //         const questions = response.data.questions
+    //         console.log(questions);
+    //         parts.forEach(part => {
+    //             part['questions'] = [];
+    //             questions.forEach(question => {
+    //                 if (question.part_id === part.id) {
+    //                     part['questions'].push(question);
+    //                 }
+    //             });
+    //         });
+    //         const numQuestions = questions.length;
+    //         dispatch(setCurrentQuiz({...assessment, parts, numQuestions}));
+    //         dispatch(setResult(assessment));
+    //         navigate('/assessmentDash/resultsForm');
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
     const assessmentsSorted = [...assessments].sort((a, b) => {
-        let da = new Date(a.created_at);
-        let db = new Date(b.created_at);
+        let da = new Date(a.taken_at);
+        let db = new Date(b.taken_at);
         return db - da;
     });
 
@@ -150,7 +150,7 @@ export default function AssessmentsList() {
                         </td>
                         <td>
                             <div className="td-input">
-                                <input onChange={(e) => setDateTerm(e.target.value)} value={dateTerm} className="table-input" placeholder="...Creation Date"/>
+                                <input onChange={(e) => setDateTerm(e.target.value)} value={dateTerm} className="table-input" placeholder="...Timestamp"/>
                                 <BsXCircle className="xIcon" onClick={() => setDateTerm('')}/>
                             </div>
                         </td>
