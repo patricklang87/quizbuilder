@@ -6,9 +6,11 @@
 
 ### Desktop
 
-<img src="https://user-images.githubusercontent.com/73432960/132585738-5213db62-84b4-4963-addb-f6759479743b.JPG" alt="login" width="500"/>
-<img src="https://user-images.githubusercontent.com/73432960/132585690-57cfcd57-ef63-4432-802d-93c880f98f76.JPG" alt="find legislators" width="500"/>
-<img src="https://user-images.githubusercontent.com/73432960/132585745-93b61dd1-6618-4647-ae40-a24b7149f2bb.JPG" alt="recent bills" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150400-197db160-6eff-46bb-aa0e-2068315358c2.JPG" alt="Lecturna Screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150409-a31c5baa-65d0-411c-89ea-0b50c85ddbd4.JPG" alt="Lecturna Screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150414-b1951871-e555-4daf-ab1d-eb4579015d97.JPG" alt="Lecturna Screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150427-d46573d0-7bf9-496f-bb3d-51832168590e.JPG" alt="Lecturna Screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/73432960/147150434-402ced05-2039-4cbc-b0dc-599010ec33a6.JPG" alt="Lecturna Screenshot" width="500"/>
 
 
 ### Mobile
@@ -57,7 +59,7 @@ To run the project locally:
 ## Future Updates
 
 - [ ] Restructure database to enable quiz versioning and collaboration.
-- [ ] Make UX responsive to mobile devices.
+- [ ] Make UX responsive to mobile screen sizes.
 - [ ] Improve quiz writing interface.
  
 ## Author
