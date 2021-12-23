@@ -10,7 +10,11 @@ const devConfig = {
 };
 
 const proConfig = {
-    connectionString: process.env.DATABASE_URL // comes from a heroku addon
+    connectionString: process.env.DATABASE_URL,
+    //ssl added during debugging: https://devcenter.heroku.com/articles/heroku-postgresql#heroku-postgres-ssl
+    ssl: {
+      rejectUnauthorized: false
+    } // comes from a heroku addon
 }
 
 const pool = new Pool(process.env.NODE_ENV === 'production' ? proConfig : devConfig);
