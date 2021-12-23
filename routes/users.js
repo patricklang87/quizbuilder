@@ -21,13 +21,13 @@ router.post("/", async (req, res, next) => {
         const salt = bcrypt.genSaltSync(10);
         const hashedPassword = bcrypt.hashSync(password, salt);
 
-        console.log("t2", new Date());
+        console.log("hashed password", hashedPassword);
 
-        //just for testing
-        res.json({hashedPassword});
-        // const newUser = await pool.query("INSERT INTO users (first_name, last_name, password, email) VALUES($1, $2, $3, $4) RETURNING *", [first_name, last_name, hashedPassword, email]);
+        const newUser = await pool.query("INSERT INTO users (first_name, last_name, password, email) VALUES($1, $2, $3, $4) RETURNING *", [first_name, last_name, hashedPassword, email]);
 
-        // res.json(newUser.rows[0]);
+        console.log("new User", newUser);
+
+        res.json(newUser.rows[0]);
     } catch (error) {
         console.log(error.message);
         if (error.constraint === "users_email_key") {
