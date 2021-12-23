@@ -33,6 +33,8 @@ export default function Register({ setShowLogin }) {
         if (response.data.msg) {
             setInfo(response.data.msg);
         } else {
+            //for testing
+            console.log("heroku testing",response)
             setShowLogin(true);
         }
         
