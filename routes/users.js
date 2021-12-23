@@ -24,7 +24,7 @@ router.post("/", async (req, res, next) => {
         console.log("t2", new Date());
 
         //just for testing
-        res.json({t1, t2, hashedPassword});
+        res.json({hashedPassword});
         // const newUser = await pool.query("INSERT INTO users (first_name, last_name, password, email) VALUES($1, $2, $3, $4) RETURNING *", [first_name, last_name, hashedPassword, email]);
 
         // res.json(newUser.rows[0]);
