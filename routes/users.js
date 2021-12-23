@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs');
 // @access public
 router.post("/", async (req, res, next) => {
     try {
+        console.log("t1", new Date())
         const { first_name, last_name, password, email } = req.body;
 
         //simple validation
@@ -20,6 +21,7 @@ router.post("/", async (req, res, next) => {
         const salt = bcrypt.genSaltSync(10);
         const hashedPassword = bcrypt.hashSync(password, salt);
 
+        console.log("t2", new Date());
         const newUser = await pool.query("INSERT INTO users (first_name, last_name, password, email) VALUES($1, $2, $3, $4) RETURNING *", [first_name, last_name, hashedPassword, email]);
 
         res.json(newUser.rows[0]);

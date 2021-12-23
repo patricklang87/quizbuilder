@@ -10,7 +10,7 @@ const devConfig = {
 };
 
 const proConfig = {
-    connectionString:  process.env.DATABASE_URL // comes from a heroku addon
+    connectionString: process.env.DATABASE_URL // comes from a heroku addon
 }
 
 const pool = new Pool(process.env.NODE_ENV === 'production' ? proConfig : devConfig);
