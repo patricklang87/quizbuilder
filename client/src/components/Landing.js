@@ -17,16 +17,19 @@ export default function Landing() {
         <div className="landing" style={{backgroundImage: `url(${banner})`, backgroundSize: "cover", height: '600px'}}>
             <div className="hero" >
               
-                <div>
+                <div className="hero-text">
                     <h1>Teach your way.</h1>
                     <p>
                         With <strong>Lecturna</strong> you can collaborate to create your own assignments, quizzes, and texts. Sign up or sign in to get started!
                     </p>
                 </div>
-                <p style={{right: 0, bottom: '0'}}>Photo: <a href="https://unsplash.com/@christinhumephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christin Hume</a> on <a href="https://unsplash.com/collections/1016802/studying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </p>
+
             </div>
             <Auth />
+            <div className="photo-attribution">
+                <p>Photo: <a href="https://unsplash.com/@christinhumephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christin Hume</a> on <a href="https://unsplash.com/collections/1016802/studying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            </div>
+            
         </div>
     )
 }
