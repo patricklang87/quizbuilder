@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postQuestion, questionTypes } from '../../utils/questions';
 import { addQuizQuestion } from '../../redux/editQuizRedux';
 
-export default function CreateQuestion({part, setShowAddQuestion, index}) {
+export default function CreateQuestion({part, setShowAddQuestion}) {
     const dispatch = useDispatch();
     const part_id = part.id;
-    const questionsLength = part.questions.length;
+    const questionsLength = part.questions ? part.questions.length : 0;
     const quizId = useSelector(state => state.editQuiz.quizId);
     const curCulturalTopic = useSelector(state => state.editQuiz.culturalTopic);
     const curGrammarTopic = useSelector(state => state.editQuiz.grammarTopic);

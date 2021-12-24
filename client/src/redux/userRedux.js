@@ -36,6 +36,7 @@ export const userSlice = createSlice({
             state.quizzesDesigned = [];
             state.firstName = null;
             state.lastName = null;
+            state.email = null;
         },
         setQuizzesDesigned: (state, action) => {
             state.quizzesDesigned = action.payload;

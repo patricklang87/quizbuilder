@@ -31,7 +31,9 @@ export const editQuizPart = async (data) => {
 
 export const getQuizParts = async (quizId) => {
     try {
+        console.log('parts, utils 34', quizId)
         const response = await axios.get(`/api/parts/${quizId}`, tokenConfig());
+        console.log('parts, utils 36', response)
         return response;
     } catch (error) {
         console.log(error);

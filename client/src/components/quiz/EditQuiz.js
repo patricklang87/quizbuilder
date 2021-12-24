@@ -18,6 +18,7 @@ export default function EditQuiz() {
         const renderParts = async (quizId) => {
             if (parts.length === 0) {
                 const response = await getQuizParts(quizId);
+                console.log("EditQuiz 21", response);
                 const parts = response.data.parts;
                 const questions = response.data.questions;
                 parts.forEach(part => {
