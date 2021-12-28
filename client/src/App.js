@@ -7,8 +7,6 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing';
 import Header from './components/header/Header';
 import Dashboard from './components/dashboard/Dashboard';
-import CreateQuestion from './components/createQuestion/CreateQuestion';
-import ListQuestions from './components/listQuestions/ListQuestions';
 import CreateQuiz from './components/quiz/CreateQuiz';
 import EditQuiz from './components/quiz/EditQuiz';
 import QuizList from './components/quiz/QuizList';

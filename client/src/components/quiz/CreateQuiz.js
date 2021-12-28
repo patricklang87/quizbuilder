@@ -39,20 +39,22 @@ export default function CreateQuiz() {
     }
 
     return (
-        <div className="container">
-            <h1>New Quiz</h1>
-            <p className="alert-text">{info}</p>
-            <label htmlFor="quizTitle">Title</label><br />
-            <input type="text" id="quizTitle" name="quizTitle" onChange={(e) => setTitle(e.target.value)}/> <br />
-            <label htmlFor="quizLanguage" >Language</label><br />
-            <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setLanguage(e.target.value)} /> <br />
-            <label htmlFor="quizLanguage" >Cultural Topic</label><br />
-            <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setCulturalTopic(e.target.value)} /> <br />
-            <label htmlFor="quizLanguage" >Grammatical Topic</label><br />
-            <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setGrammarTopic(e.target.value)} /> <br />
-            <label htmlFor="intendedCourse">Course</label> <br />
-            <input type="text" id="intendedCourse" name="intendedCourse" onChange={(e) => setCourse(e.target.value)} /> <br />
-            <button className={createBtnClass} onClick={handleCreate}>Create Quiz</button> 
+        <div className="newQuizPage">
+            <div className="container" >
+                <h1>New Quiz</h1>
+                <p className="alert-text">{info}</p>
+                <label htmlFor="quizTitle">Title</label><br />
+                <input type="text" id="quizTitle" name="quizTitle" onChange={(e) => setTitle(e.target.value)}/> <br />
+                <label htmlFor="quizLanguage" >Language</label><br />
+                <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setLanguage(e.target.value)} /> <br />
+                <label htmlFor="quizLanguage" >Cultural Topic</label><br />
+                <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setCulturalTopic(e.target.value)} /> <br />
+                <label htmlFor="quizLanguage" >Grammatical Topic</label><br />
+                <input type="text" id="quizLanguage" name="quizLanguage" onChange={(e) => setGrammarTopic(e.target.value)} /> <br />
+                <label htmlFor="intendedCourse">Course</label> <br />
+                <input type="text" id="intendedCourse" name="intendedCourse" onChange={(e) => setCourse(e.target.value)} /> <br />
+                <button className={createBtnClass} onClick={handleCreate}>Create Quiz</button> 
+            </div>
         </div>
     )
 }

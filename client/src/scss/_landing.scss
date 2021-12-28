@@ -1,8 +1,25 @@
 .landing {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    height: 400px;
     position: relative;
+    background-image: url('../assets/images/studying_hume.jpg');
+    background-size: cover;
+    height: 600px;
+
+    @include md-screen{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    @include xs-screen{
+        background-image: none;
+        background: rgb(11,232,222);
+        background: linear-gradient(121deg, rgba(11,232,222,1) 21%, rgba(12,252,133,1) 75%); 
+        height: 520px;
+    }
 }
 
 .hero {
@@ -16,6 +33,10 @@
     background-color: rgba(255, 255, 255, 0.445);
     padding: 10px;
     border-radius: 5px;
+
+    @include md-screen {
+      margin: 20px;  
+    }
 }
 
 .photo-attribution {
@@ -29,6 +50,10 @@
         padding: 0;
         margin: 0;
         color: black;
+    }
+
+    @include xs-screen{
+        display: none;
     }
 }
 

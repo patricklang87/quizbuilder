@@ -1,6 +1,11 @@
 Footer {
+    display: block;
     text-align: center;
     font-size: small;
     margin: 10px 10px 10px 10px;
     bottom: 0;
+
+    @include xs-screen{
+        margin: 2px 0;
+    }
 }

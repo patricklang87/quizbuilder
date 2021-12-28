@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import Auth from './auth/Auth';
 import { useNavigate } from 'react-router-dom';
-import banner from '../assets/images/studying_hume.jpg';
+// import banner from '../assets/images/studying_hume.jpg';
 
 export default function Landing() {
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function Landing() {
 
 
     return (
-        <div className="landing" style={{backgroundImage: `url(${banner})`, backgroundSize: "cover", height: '600px'}}>
+        <div className="landing">
             <div className="hero" >
               
                 <div className="hero-text">

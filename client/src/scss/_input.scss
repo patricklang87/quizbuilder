@@ -4,17 +4,22 @@ input[type="text"], input[type="email"], input[type="password"], select, option,
     border-radius: 3px;
     padding: 3px;
     font-family: $font-stack;
+
+
 }
 
 .table-input {
     @extend %special-input;
     width: 120px;
+
+    @include xs-screen {
+        width: 100px;
+    }
 }
 
 input[type="radio"] {
     margin: 5px;
 }
-
 
 textarea {
     width: 100%;

@@ -68,7 +68,6 @@ export default function QuizForm() {
                 onClick={handleSubmit}>
                 Submit Quiz
             </button>
-            <button className="btn btn-caution">Leave Quiz</button>
         </div>
         
     )

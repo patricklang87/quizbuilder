@@ -7,11 +7,40 @@
 .editQuizPart {
     @extend %quizPart;
     margin: 10px 0;
+
+    @include xs-screen {
+        margin: 30px 5px;
+
+        .container {
+            margin: 10px 0px;
+        }
+
+        input[type="text"], input[type="select"] {
+            width:98%
+        }
+    }
 }
 
 .takeQuizPart {
     @extend %quizPart;
     margin: 30px 30px;
+
+    @include xs-screen {
+        margin: 30px 5px;
+
+        .container {
+            margin: 10px 0px;
+        }
+
+        input[type="text"] {
+            width:98%
+        }
+    }
+}
+
+.newQuizPage {
+    display: flex;
+    justify-content: center;
 }
 
 .result-incorrect {

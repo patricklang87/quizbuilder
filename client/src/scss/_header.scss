@@ -12,4 +12,40 @@
     tr {
         margin: 2px 5px 2px 5px;
     }
+
+    @include xs-screen{
+        display: none;
+    }
+}
+
+.mobileHeader {
+    display: none;
+    width: 100%;
+    
+    a, .nav-link {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include xs-screen {
+        display: block;
+    }
+}
+
+.link-menu {
+    position: fixed;
+    right: 0;
+    background: white;
+    box-shadow: 2px 2px 2px 2px darken($light-color, 50%);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+    top: -10px;
+}
+
+.hamburger-icon {
+    position: fixed;
+    right: 20px;
 }

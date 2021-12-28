@@ -19,3 +19,29 @@ $inactive-color: rgb(220, 225, 228);
     background-color: $color;
     color: set-text-color($color);
 }
+
+
+// responsive design setup
+@mixin lg-screen {
+    @media only screen and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin md-screen {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin sm-screen {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin xs-screen {
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
