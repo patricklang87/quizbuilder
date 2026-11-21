@@ -34,7 +34,16 @@ The project has not yet been optimized for mobile devices.
 
 ## Links
 
-- [Repo](https://github.com/patricklang87/quizbuilder "Lecturna Repo") 
+- [Repo](https://github.com/patricklang87/quizbuilder "Lecturna Repo")
+
+The app was originally deployed on Heroku and is not currently hosted.
+
+## Features
+
+- Accounts with bcrypt-hashed passwords and JWT authentication
+- Write multiple-choice, true/false, and fill-in-the-blank questions, and organize them into quiz parts
+- Take quizzes and get them graded automatically. Fill-in-the-blank and multiple-choice questions can have several accepted answers.
+- Track per-question response statistics and each quiz's running average score
 
 
 ## Run the project
@@ -42,11 +51,11 @@ The project has not yet been optimized for mobile devices.
 To run the project locally:
 
 - Clone the file.
-- In the project's root directory, run 'npm install && npm client-install' to install all necessary dependencies.
+- In the project's root directory, run `npm install && npm run client-install` to install all necessary dependencies.
 - Log into the psql CLI and create a local database.
 - Create a .env file in the root directory, and create PG_USER, PG_PASSWORD, PG_HOST, PG_PORT, PG_DATABASE and JWT_SECRET variables. PG_USER is the username from your local database, PG_PASSWORD is your password, and PG_DATABASE is the name you've given your database. 
 - Using the commands from the database.sql file, create the necessary tables in the psql CLI.
-- Use 'npm run dev' to run the front end and backend simoultaneously.
+- Use 'npm run dev' to run the front end and backend simultaneously.
 
 ## Built with
 
@@ -64,13 +73,17 @@ To run the project locally:
 
 
 ### Backend
-- PostgresSQL
+- PostgreSQL
 - PG
 - JSON Web Token
 - Bcryptjs
 - Express
 - Dotenv
 - Concurrently
+
+### Testing
+- Jest
+- Supertest
 
 ## Future Updates
 
