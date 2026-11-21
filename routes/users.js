@@ -14,7 +14,7 @@ router.post("/", async (req, res, next) => {
 
         //simple validation
         if (!first_name || !last_name || !email || !password ) {
-            return res.status.apply(400).json({msg: 'Please enter all fields'});
+            return res.status(400).json({msg: 'Please enter all fields'});
         }
 
         // Create salt & hash

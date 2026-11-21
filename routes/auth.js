@@ -15,12 +15,12 @@ router.post("/", async (req, res, next) => {
 
         //simple validation
         if (!email || !password ) {
-            return res.status.apply(400).json({msg: 'Please enter all fields'});
+            return res.status(400).json({msg: 'Please enter all fields'});
         }
 
         const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
         
-        if (!user) {
+        if (user.rows.length === 0) {
             return res.status(400).json({msg: "Invalid credentials."})
         }
         bcrypt.compare(password, user.rows[0].password)
